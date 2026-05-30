@@ -1,7 +1,7 @@
 # Answers to Technical Questions
 
 ### 1. How long did you spend on the coding test? What would you add to your solution if you had more time?
-* **Time Spent:** I spent approximately 2-3 days working on this evaluation. This included setting up the MySQL database layer, creating a reliable PHP MVC folder architecture to handle slide records, implementing the administrative CRUD dashboards, and refining the frontend interface for pixel-perfect responsiveness matching both desktop and mobile target mockups.
+* **Time Spent:** I spent approximately 2 and a half days working on this evaluation. This included setting up the MySQL database layer, creating a reliable PHP MVC folder architecture to handle slide records, implementing the administrative CRUD dashboards, and refining the frontend interface for pixel-perfect responsiveness matching both desktop and mobile target mockups.
 
 * **Production-Grade Features Already Implemented:**
     1. **Robust Validation Layer (Create & Edit):** Implemented thorough data sanitization using `trim()` alongside mandatory required string tracking. I also added strict browser-side validation blocks (`required` and explicit asset input `accept` parameters) to guide user entries.
