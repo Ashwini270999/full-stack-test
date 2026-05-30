@@ -8,7 +8,7 @@
     2. **Deep Binary Image Inspections:** Implemented server-side security using PHP's `finfo` extension to analyze the underlying binary magic bytes of file uploads, safely blocking malicious or corrupted injections from breaking layouts regardless of their renamed file extension.
     3. **Atomic File Swapping Operations:** Built a safe file-swapping pipeline during record adjustments that ensures older slide assets are *only* pruned from disk (`unlink()`) once the new image upload and MySQL database transactions succeed completely. If a transaction fails, it auto-rolls back file transfers to save space and prevent broken carousel links.
     4. **UX Destructive Safeguards:** Wired JavaScript confirmation dialog interceptors on all dashboard element removal controls to protect against unintended record purging.
-    5. **Separation of Concerns:** Externalized frontend interactive JavaScript controllers into detached component assets (`slider-accordion.js`), eliminating script parsing overhead from server-side markup trees.
+    5. **Separation of Concerns:** Externalized frontend interactive JavaScript controllers into detached component assets (`main.js`), eliminating script parsing overhead from server-side markup trees.
     6. **De-coupled Asset Management:** Externalized all custom presentation layers into a dedicated stylesheet layout (`style.css`). This strict separation reduces template overhead, enables native browser asset caching, and radically maximizes Cumulative Layout Shift (CLS) performance scores.
 
 * **What I would add with more time:**
