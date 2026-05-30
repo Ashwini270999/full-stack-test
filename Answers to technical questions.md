@@ -40,7 +40,7 @@ Yes, tracking down latency and system bottlenecks in production requires a highl
     "frontend_ecosystem": ["React.js", "JavaScript (ES6+)", "jQuery", "Ajax", "Bootstrap 5", "HTML5/CSS3"],
     "databases_and_storage": ["PostgreSQL", "MySQL"],
     "version_control": ["Git", "SVN"],
-    "project_management_tools": ["Jira"]
+    "project_management_tools": ["JIRA"]
   },
   "engineering_strengths": {
     "optimization": "Database indexing, query profiling, caching strategies, and minifying asset payloads to enhance Core Web Vitals.",
