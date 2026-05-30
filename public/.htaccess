@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Force remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Route /admin → /admin/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^admin$ admin/index.php [L]

@@ -1,0 +1,357 @@
+
+body {
+    margin: 0;
+    background: #072b4a; /* Matched to design dark blue */
+    font-family: Arial, sans-serif;
+}
+
+/* ====================================
+MAIN SECTION
+==================================== */
+.main-section {
+    padding: 60px 0;
+}
+
+.main-heading {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 45px;
+}
+
+.main-heading h1 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.main-heading p {
+    font-size: 16px;
+    color: #b0c4de;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.custom-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ====================================
+DESKTOP SYSTEM (Widths >= 992px)
+==================================== */
+.desktop-view {
+    display: block;
+}
+
+.mobile-view {
+    display: none;
+}
+
+.main-wrapper {
+    display: flex;
+    height: 520px; 
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* LEFT TABS */
+.tab-wrapper {
+    width: 28%;
+    background: #f4f5f7;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.tab-item {
+    background: #fff;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.tab-item.active {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.tab-item.active::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: 15px solid #74bfd0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    z-index: 10;
+}
+
+.tab-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.tab-text {
+    flex-grow: 1;
+}
+
+/* TEAL CENTER SLIDER */
+.content-wrapper {
+    width: 37%;
+    background: #74bfd0;
+    height: 100%;
+}
+
+.content-slider {
+    height: 100%;
+}
+
+.content-slider .slick-list,
+.content-slider .slick-track,
+.content-slider .slick-slide > div {
+    height: 100%;
+}
+
+.slide-box {
+    height: 100%;
+    /* Increase padding to match design, but keep it tight at the top */
+    padding: 50px 40px; 
+    display: flex;
+    flex-direction: column;
+    /* CHANGE THIS FROM center TO flex-start */
+    justify-content: flex-start; 
+    color: #fff;
+}
+
+.slide-box h5 {
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.15);
+    align-self: flex-start;
+    padding: 5px 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.slide-box h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+.slide-box .learn-more-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* RIGHT FRAMED IMAGE SLIDER */
+.image-wrapper {
+    width: 35%;
+    height: 100%;
+    background: #000;
+}
+
+.image-slider {
+    height: 100%;
+}
+
+.image-slider .slick-list,
+.image-slider .slick-track,
+.image-slider .slick-slide > div {
+    height: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
+}
+
+.slick-dots {
+    bottom: 25px !important;
+}
+.slick-dots li button:before {
+    color: #fff !important;
+    opacity: 0.4;
+    font-size: 10px;
+}
+.slick-dots li.slick-active button:before {
+    color: #fff !important;
+    opacity: 1;
+}
+
+/* ====================================
+RESPONSIVE REFACTOR (Under 991px Viewport)
+==================================== */
+@media (max-width: 991px) {
+    .desktop-view {
+        display: none !important;
+    }
+
+    .mobile-view {
+        display: block !important;
+    }
+
+    .main-section {
+        padding: 40px 0;
+    }
+
+    .main-heading h1 {
+        font-size: 32px;
+    }
+
+    .mobile-card {
+        margin-bottom: 16px;
+        background: #fff;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .mobile-tab {
+        padding: 16px 20px;
+        cursor: pointer;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mobile-tab-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .mobile-tab-left img {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+    }
+
+    .mobile-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+    }
+
+    /* Icon box container sizing */
+    .mobile-icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .mobile-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .mobile-content {
+        position: relative;
+    }
+
+    /* Teal Top pointer triangle block */
+    .mobile-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom: 10px solid #74bfd0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        z-index: 5;
+    }
+
+    /* Refactored layout with background fallbacks */
+    .mobile-slide {
+        /* Adjusted top padding to 40px to start text cleanly without a massive drop gap */
+        padding: 40px 25px 55px 25px; 
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* CHANGE THIS FROM center TO flex-start */
+        justify-content: flex-start; 
+        min-height: 340px;
+        position: relative;
+        z-index: 1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Pure overlay layer to guarantee image visibility blends smoothly */
+    .mobile-slide::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(116, 191, 208, 0.92); /* Matches your design layout overlay tints */
+        z-index: -1;
+    }
+
+    .mobile-slide h5 {
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        background: rgba(0, 0, 0, 0.15);
+        padding: 5px 12px;
+        font-weight: bold;
+        display: inline-block;
+        border-radius: 2px;
+    }
+
+    .mobile-slide h2 {
+        font-size: 24px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        font-weight: normal;
+        max-width: 90%;
+    }
+
+    .mobile-slide .learn-more-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+}
